@@ -1429,10 +1429,26 @@ footer {
     border-radius: var(--radius-lg);
   }
   .chaos-illustration {
-    height: 280px;
+    height: 240px;
+    transform: scale(0.75);
+    transform-origin: top center;
+    margin-top: 32px;
   }
   .chaos-file {
+    font-size: 0.75rem;
+  }
+  .filename-before, .filename-after {
     font-size: 0.65rem;
+    padding: 10px;
+    word-break: break-all;
+  }
+  .mock-filename {
+    padding: 16px;
+  }
+  .step-visual {
+    max-height: none;
+    aspect-ratio: auto;
+    min-height: 280px;
   }
 }
 
