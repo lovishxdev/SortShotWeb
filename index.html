@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SortShot is a lightweight macOS utility that automatically organizes your screenshots, captures their source URLs, and keeps your visual assets perfectly searchable."
+    />
+    <title>SortShot — Your screenshots, finally on autopilot.</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- NAVBAR                                         -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <div class="navbar-inner">
+          <a href="#" class="logo">
+            <div class="logo-icon">📸</div>
+            SortShot
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#maker">About</a></li>
+          </ul>
+
+          <a href="assets/SortShot_v1.0.dmg" download class="btn-nav"> Get SortShot </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- HERO                                           -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="beam beam-1"></div>
+        <div class="beam beam-2"></div>
+        <div class="beam beam-3"></div>
+        <div class="beam beam-4"></div>
+        <div class="beam beam-5"></div>
+        <div class="hero-grain"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+
+          <h1 class="hero-title reveal reveal-delay-1">
+            Your Mac's screenshots,<br />
+            <span class="gradient-text">finally on autopilot.</span>
+          </h1>
+
+          <p class="hero-sub reveal reveal-delay-2">
+            Stop losing ideas in a sea of desktop clutter. SortShot is a
+            lightweight macOS utility that automatically organizes your
+            screenshots, captures their source URLs, and keeps your visual
+            assets perfectly searchable.
+          </p>
+
+          <div class="hero-cta reveal reveal-delay-3">
+            <a href="assets/SortShot_v1.0.dmg" download class="btn-primary" id="hero-cta-btn">
+              Download SortShot for macOS
+            </a>
+            <p class="hero-footnote">Free 14-day trial. macOS 12.0+</p>
+          </div>
+
+          <!-- Install Instructions -->
+          <div class="install-instructions reveal reveal-delay-4">
+            <h3 class="install-title">How to Install (macOS Security)</h3>
+            <p class="install-subtitle">Because this is a brand-new indie app, macOS requires a quick manual approval on your first launch.</p>
+            <ol class="install-steps">
+              <li>Open the downloaded .dmg and drag the app to your Applications folder.</li>
+              <li>Try to open the app. If you see an "unidentified developer" warning, click <strong>OK</strong>.</li>
+              <li>Open your Mac's <strong>System Settings &gt; Privacy &amp; Security</strong>.</li>
+              <li>Scroll down and click <strong>"Open Anyway"</strong> next to the app name.</li>
+            </ol>
+          </div>
+
+        </div>
+
+        <!-- Video Placeholders -->
+        <div class="hero-media-grid reveal reveal-delay-5">
+          <div class="hero-video-card">
+            <div class="video-card-header">
+              How to Install &amp; Set Up
+            </div>
+            <div class="video-placeholder-container">
+              <div class="video-play-icon">▶</div>
+            </div>
+          </div>
+          
+          <div class="hero-video-card">
+            <div class="video-card-header">
+              See it in Action (Demo)
+            </div>
+            <div class="video-placeholder-container">
+              <video controls loop playsinline style="width:100%; display:block; object-fit:cover; border-radius: 0 0 var(--radius-lg) var(--radius-lg)">
+                <source src="assets/demo.mov" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PROBLEM                                        -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="problem" id="problem">
+      <div class="container">
+        <span class="section-label reveal">The Problem</span>
+        <h2 class="headline reveal reveal-delay-1">
+          Stop treating your desktop<br />like a graveyard.
+        </h2>
+        <p class="problem-body reveal reveal-delay-2">
+          We all do it.
+          <span class="problem-highlight"
+            >A slide from a meeting, a UI element from Dribbble, a snippet of
+            code.</span
+          >
+          Before you know it, your screen is covered in overlapping files named
+          <span class="problem-highlight">Screen Shot 2026-...</span>
+          You waste time digging for inspiration you know you saved. Native Mac
+          tools are great for capturing, but <em>terrible</em> for organizing.
+        </p>
+
+        <!-- Floating chaos file names illustration -->
+        <div
+          class="chaos-illustration reveal reveal-delay-3"
+          aria-hidden="true"
+        >
+          <div class="chaos-file">Screen Shot 2026-01-12 at 9.41.23 AM.png</div>
+          <div class="chaos-file">Screen Shot 2026-01-15 at 3.07.44 PM.png</div>
+          <div class="chaos-file">
+            Screen Shot 2026-02-03 at 11.22.01 AM.png
+          </div>
+          <div class="chaos-file">Screen Shot 2026-01-29 at 8.55.19 PM.png</div>
+          <div class="chaos-file">
+            Screen Shot 2026-02-18 at 10.14.37 AM.png
+          </div>
+          <div class="chaos-file">Screen Shot 2026-03-01 at 2.49.08 PM.png</div>
+          <div class="chaos-file">Screen Shot 2026-02-27 at 5.33.55 PM.png</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- FEATURES GRID                                  -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="features-header">
+          <span class="section-label reveal">Features</span>
+          <h2 class="headline reveal reveal-delay-1">
+            Everything you wished<br />macOS did natively.
+          </h2>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card reveal">
+            <div class="feature-icon icon-purple">🗂</div>
+            <h3 class="feature-title">Instant Organisation</h3>
+            <p class="feature-desc">Take a screenshot, and SortShot routes it directly into clean, designated folders. Your desktop stays spotless without you lifting a finger.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon icon-blue">🔗</div>
+            <h3 class="feature-title">It Remembers the Source</h3>
+            <p class="feature-desc">SortShot grabs the active URL when you take a screenshot and stores it in the file metadata. One click gets you right back to the original page.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon icon-teal">🔍</div>
+            <h3 class="feature-title">Find Anything, Instantly</h3>
+            <p class="feature-desc">Looking for that one specific UI reference in an ocean of files? Use the built-in visual timeline to find exactly what you need.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon icon-pink">✂️</div>
+            <h3 class="feature-title">Zero-Clutter Sharing</h3>
+            <p class="feature-desc">Annotate your screenshot, copy it to your clipboard, and SortShot instantly trashes the file. Quick shares that never clutter your hard drive.</p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="feature-card reveal reveal-delay-4">
+            <div class="feature-icon icon-orange">📁</div>
+            <h3 class="feature-title">Custom Projects</h3>
+            <p class="feature-desc">Working on a redesign or a research paper? Group your visual inspiration, references, and assets into dedicated, color-coded project spaces.</p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="feature-card reveal reveal-delay-5">
+            <div class="feature-icon icon-green">⌨️</div>
+            <h3 class="feature-title">Menu Bar Native</h3>
+            <p class="feature-desc">SortShot lives quietly in your menu bar and intercepts your existing screenshot hotkeys — ⌘⇧3 and ⌘⇧4 — with zero friction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- HOW IT WORKS — DEEP FEATURES                   -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="how-header">
+          <span class="section-label reveal">How It Works</span>
+          <h2 class="headline reveal reveal-delay-1">
+            Three seconds after you press<br />⌘⇧4 — it's already handled.
+          </h2>
+        </div>
+
+        <div class="step-list">
+          <!-- Step 1 — Auto Folders -->
+          <div class="step reveal">
+            <div class="step-body-col">
+              <div class="step-badge">
+                <div class="step-number">1</div>
+                Auto-Organisation
+              </div>
+              <h3 class="headline step-title">
+                Your desktop stays<br />permanently clean.
+              </h3>
+              <p class="step-body">
+                The moment you press your screenshot hotkey, SortShot captures
+                the active app context and routes the file into a named
+                subfolder — <strong>~/Desktop/SortShots/Figma/</strong>,
+                <strong>Chrome/</strong>, <strong>Projects/Redesign/</strong> —
+                automatically. No manual filing, ever.
+              </p>
+            </div>
+            <div class="step-visual">
+              <div class="mock-folder-structure">
+                <div class="folder">📁 SortShots/</div>
+                <div class="file">📁 Figma/</div>
+                <div
+                  style="
+                    padding-left: 32px;
+                    color: var(--muted);
+                    font-size: 0.72rem;
+                  "
+                >
+                  · Pricing-Page-143012.png
+                </div>
+                <div
+                  style="
+                    padding-left: 32px;
+                    color: var(--muted);
+                    font-size: 0.72rem;
+                  "
+                >
+                  · Dashboard-v2-143551.png
+                </div>
+                <div class="file">📁 Chrome/</div>
+                <div
+                  style="
+                    padding-left: 32px;
+                    color: var(--muted);
+                    font-size: 0.72rem;
+                  "
+                >
+                  · GitHub-PullRequest-151023.png
+                </div>
+                <div class="file">📁 Projects/</div>
+                <div
+                  style="
+                    padding-left: 32px;
+                    color: var(--muted);
+                    font-size: 0.72rem;
+                  "
+                >
+                  📁 <span>Redesign 2026</span>/
+                </div>
+                <div
+                  style="
+                    padding-left: 48px;
+                    color: var(--muted);
+                    font-size: 0.72rem;
+                  "
+                >
+                  · Inspiration-160211.png
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 — Timeline -->
+          <div class="step reverse reveal">
+            <div class="step-body-col">
+              <div class="step-badge">
+                <div class="step-number">2</div>
+                Visual Timeline
+              </div>
+              <h3 class="headline step-title">
+                Browse and search<br />every capture visually.
+              </h3>
+              <p class="step-body">
+                Open the Timeline window to see a beautiful masonry grid of all
+                your captures, grouped by app and project. Search by name,
+                project, or source — find the screenshot you're thinking of in
+                under three seconds.
+              </p>
+            </div>
+            <div class="step-visual">
+              <div class="mock-timeline">
+                <div class="mock-search">
+                  <span style="opacity: 0.4">🔍</span>
+                  <span style="opacity: 0.4; font-size: 0.75rem"
+                    >Search captures, apps, or projects…</span
+                  >
+                </div>
+                <div style="display: flex; gap: 8px; margin-bottom: 4px">
+                  <div
+                    style="
+                      padding: 5px 14px;
+                      border-radius: 100px;
+                      background: rgba(139, 92, 246, 0.15);
+                      border: 1px solid rgba(139, 92, 246, 0.3);
+                      font-size: 0.72rem;
+                      color: #c4b0ff;
+                      font-weight: 600;
+                    "
+                  >
+                    All
+                  </div>
+                  <div
+                    style="
+                      padding: 5px 14px;
+                      border-radius: 100px;
+                      background: rgba(255, 255, 255, 0.04);
+                      border: 1px solid rgba(255, 255, 255, 0.08);
+                      font-size: 0.72rem;
+                      color: var(--muted);
+                    "
+                  >
+                    Redesign
+                  </div>
+                  <div
+                    style="
+                      padding: 5px 14px;
+                      border-radius: 100px;
+                      background: rgba(255, 255, 255, 0.04);
+                      border: 1px solid rgba(255, 255, 255, 0.08);
+                      font-size: 0.72rem;
+                      color: var(--muted);
+                    "
+                  >
+                    Research
+                  </div>
+                </div>
+                <div class="mock-grid">
+                  <div class="mock-card" style="height: 70px"></div>
+                  <div class="mock-card" style="height: 55px"></div>
+                  <div class="mock-card" style="height: 80px"></div>
+                  <div class="mock-card" style="height: 120px"></div>
+                  <div class="mock-card" style="height: 65px"></div>
+                  <div class="mock-card" style="height: 55px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 — Smart Filenames -->
+          <div class="step reveal">
+            <div class="step-body-col">
+              <div class="step-badge">
+                <div class="step-number">3</div>
+                Smart Filenames
+              </div>
+              <h3 class="headline step-title">
+                Filenames that actually<br />mean something.
+              </h3>
+              <p class="step-body">
+                SortShot uses on-device Natural Language processing to extract
+                meaningful keywords from the page title and app context —
+                turning cryptic timestamps into descriptive, scannable filenames
+                that make sense at a glance.
+              </p>
+            </div>
+            <div class="step-visual">
+              <div class="mock-filename">
+                <div class="filename-before">
+                  Screen Shot 2026-03-07 at 14.30.21.png
+                </div>
+                <div class="arrow-down">↓</div>
+                <div class="filename-after">GitHub-PullRequest-143021.png</div>
+                <div class="arrow-down">↓</div>
+                <div class="filename-after">
+                  Figma-LoginPage-Redesign-143612.png
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- PRICING                                        -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="pricing-header">
+          <span class="section-label reveal">Pricing</span>
+          <h2 class="headline reveal reveal-delay-1">
+            Simple pricing for<br />a cleaner Mac.
+          </h2>
+          <p
+            class="subheadline reveal reveal-delay-2"
+            style="max-width: 460px; margin: 16px auto 0"
+          >
+            One price. Forever. No subscription to cancel, no features gated
+            behind a paywall.
+          </p>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="pricing-badge">Lifetime License</div>
+
+          <div class="price-row">
+            <span class="price-currency">$</span>
+            <span class="price-amount">14</span>
+            <span class="price-currency">.99</span>
+          </div>
+          <p class="price-label">Pay once. Use forever.</p>
+
+          <ul class="pricing-features">
+            <li>
+              <div class="check-icon">✓</div>
+              Unlimited auto-sorting
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              Source URL context capture
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              Lightning-fast visual search &amp; timeline
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              Annotation &amp; Copy + Trash workflow
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              Project workspaces with color tags
+            </li>
+            <li>
+              <div class="check-icon">✓</div>
+              All future 1.X updates
+            </li>
+          </ul>
+
+          <a href="assets/SortShot_v1.0.dmg" download class="btn-buy" id="buy-btn">Download SortShot Now</a>
+
+          <p class="pricing-footnote">
+            Comes with a 14-day full-feature free trial.<br />Try it before you
+            buy it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- MAKER                                          -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="maker" id="maker">
+      <div class="container">
+        <div class="maker-inner">
+          <span class="section-label reveal">The Maker</span>
+          <div class="maker-avatar reveal reveal-delay-1">L</div>
+
+          <h2 class="headline maker-headline reveal reveal-delay-2">
+            Built for my own sanity.
+          </h2>
+
+          <p class="maker-body reveal reveal-delay-3">
+            Hi, I'm <strong style="color: var(--foreground)">Lovish</strong>.
+            Between studying engineering at IIT Delhi, writing web code, and
+            editing motion graphics for my YouTube channel, my Mac desktop was a
+            total disaster zone of lecture slides and UI references. I built
+            SortShot because I was tired of losing my own assets and wanted a
+            tool that actually respected my workflow. I use it every single day
+            — and I think you'll love it too.
+          </p>
+
+          <div class="maker-links reveal reveal-delay-4">
+            <a
+              href="https://x.com/lovishxdev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="maker-link"
+              id="twitter-link"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.213 5.567zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+              Follow me on X
+            </a>
+            <span class="maker-sep">•</span>
+            <a
+              href="https://www.linkedin.com/in/lovish-kumar-13aa1a36b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="maker-link"
+              id="youtube-link"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 12.64 12.64 0 0 0-1.22-.88A12 12 0 0 0 12 3a12 12 0 0 0-2.6.06 12.64 12.64 0 0 0-1.22.88A4.83 4.83 0 0 1 4.41 6.69 48.09 48.09 0 0 0 4 12a48.09 48.09 0 0 0 .41 5.31A4.83 4.83 0 0 1 8.18 20.06a12.64 12.64 0 0 0 1.22.88A12 12 0 0 0 12 21a12 12 0 0 0 2.6-.06 12.64 12.64 0 0 0 1.22-.88 4.83 4.83 0 0 1 3.77-2.75A48.09 48.09 0 0 0 20 12a48.09 48.09 0 0 0-.41-5.31zM12 15.5l-4-2.5V9l4 2.5 4-2.5v4z"
+                />
+              </svg>
+              Follow me on LinkdIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- FINAL CTA                                      -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-cta-content">
+          <h2 class="headline final-cta-title reveal">
+            Your desktop has been messy<br />long enough.
+          </h2>
+          <p class="final-cta-sub reveal reveal-delay-1">
+            Join hundreds of developers, designers, and creators who finally
+            have a desktop they can see.
+          </p>
+          <a
+            href="assets/SortShot_v1.0.dmg" download
+            class="btn-primary reveal reveal-delay-2"
+            id="final-cta-btn"
+          >
+            Download for macOS
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- TRUST BANNER                                   -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="trust-banner">
+      <div class="container">
+        <div class="trust-inner">
+          <p class="trust-headline">Your screen is your business.</p>
+          <p class="trust-body">SortShot runs entirely locally on your Mac. No cloud syncing, no AI telemetry, and no background uploads. Your sensitive code snippets and private chats stay yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- FOOTER                                         -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-copy">
+            © 2026 SortShot by Lovish · Made with ♥ at IIT Delhi
+          </p>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="mailto:hi@sortshot.app">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
